@@ -1,0 +1,114 @@
+@import "tailwindcss" reference;
+
+.contact-section {
+  @apply mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
+}
+
+.contact-header {
+  @apply mb-10 max-w-2xl sm:mb-12;
+}
+
+.contact-eyebrow {
+  @apply text-sm font-medium tracking-wide text-gray-500 uppercase;
+}
+
+.contact-title {
+  @apply mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
+}
+
+.contact-description {
+  @apply mt-4 text-base leading-relaxed text-gray-600 sm:text-lg;
+}
+
+.contact-grid {
+  @apply grid gap-8 lg:grid-cols-2 lg:gap-12;
+}
+
+.contact-panel {
+  @apply flex flex-col gap-8;
+}
+
+.contact-info {
+  @apply rounded-2xl border border-gray-200 bg-white p-6 sm:p-8;
+}
+
+.contact-availability {
+  @apply text-base leading-relaxed text-gray-600;
+}
+
+.contact-methods {
+  @apply mt-6 space-y-5;
+}
+
+.contact-method {
+  @apply flex items-start gap-4;
+}
+
+.contact-method-icon-wrap {
+  @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-700;
+}
+
+.contact-method-icon {
+  @apply h-5 w-5;
+}
+
+.contact-method-label {
+  @apply text-sm font-medium text-gray-500;
+}
+
+.contact-method-value {
+  @apply mt-1 text-base font-medium text-gray-900;
+}
+
+.contact-method-link {
+  @apply transition-colors hover:text-gray-600;
+}
+
+.contact-socials {
+  @apply rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8;
+}
+
+.contact-socials-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.contact-socials-list {
+  @apply mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap;
+}
+
+.contact-social-link {
+  @apply inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:text-gray-900;
+}
+
+.contact-form-card {
+  @apply rounded-2xl border border-gray-200 bg-white p-6 sm:p-8;
+}
+
+.contact-form {
+  @apply flex flex-col gap-5;
+}
+
+.contact-field {
+  @apply flex flex-col gap-2;
+}
+
+.contact-label {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.contact-input,
+.contact-textarea {
+  @apply w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-base text-gray-900 placeholder:text-gray-400 focus:border-gray-500 focus:ring-2 focus:ring-gray-200 focus:outline-none;
+}
+
+.contact-textarea {
+  @apply resize-y min-h-32;
+}
+
+.contact-submit {
+  @apply inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gray-700 sm:w-auto;
+}
+
+.contact-form-note {
+  @apply text-sm text-gray-600;
+}
