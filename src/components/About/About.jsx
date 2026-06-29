@@ -1,29 +1,79 @@
-
+import { ABOUT_CONTENT } from './aboutConfig'
+import AboutBlock from './AboutBlock'
+import './About.css'
 
 function About() {
+  const {
+    eyebrow,
+    title,
+    introduction,
+    education,
+    skills,
+    interests,
+    goals,
+    cta,
+  } = ABOUT_CONTENT
+
+
+  const skillsItems = skills.items.map((skill) => {
     return (
-        <>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    I am a third-year Computer Science and Engineering student at NIT Sikkim with a strong interest in web development, UI/UX design, and software engineering. I enjoy building meaningful and creative solutions that solve real-world problems.
-                </p>
-                <p>
-Currently, I am learning and building projects using the MERN stack while strengthening my understanding of core computer science subjects and data structures & algorithms.
-                </p>
-                <p>
-My technical skills include C, C++, Python, SQL, JavaScript, React, Node.js, Express.js, and MongoDB. I also enjoy designing user interfaces and have created several landing pages using Figma.
-                </p>
-                <p>
-Beyond academics and coding, I am passionate about photography and regularly share my work on Instagram. I also enjoy playing chess, exploring new technologies, and continuously learning new skills.
-                </p>
-                <p>
-This portfolio showcases some of my projects, skills, and learning journey as a developer.
-                </p>
-                <a href="#projects">View Projects</a>
-            </section>
-        </>
+      <li key={skill}>
+        <span className='about-skill-tag'>{skill}</span>
+      </li> 
     )
+  })
+
+  const interestItems = interests.items.map((interest) => (
+    <li key={interest}>
+      <span className='about-interest-item'>
+        <span className='about-interest-dot' aria-hidden="true" />
+        {interest}
+      </span>
+    </li>
+  ))
+
+  return (
+    <section id="about" className="about-section" aria-labelledby="about-heading">
+      <header className="about-header">
+        <p className="about-eyebrow">{eyebrow}</p>
+        <h2 id="about-heading" className="about-title">
+          {title}
+        </h2>
+      </header>
+
+      <p className="about-intro">{introduction}</p>
+      
+      <div className="about-grid">
+        <AboutBlock title={education.title}>
+          <p>{education.description}</p>
+        </AboutBlock>
+
+        <AboutBlock title={skills.title}>
+          <p>{skills.description}</p>
+          <ul className="about-skills-list" aria-label="Technical skills">
+            {skillsItems}
+          </ul>
+        </AboutBlock>
+      </div>
+
+      <div className="about-grid">
+        <AboutBlock title={interests.title}>
+          <p>{interests.description}</p>
+          <ul className="about-interests-list" aria-label="Personal interests">
+            {interestItems}
+          </ul>
+        </AboutBlock>
+
+        <AboutBlock title={goals.title} className="about-block--highlight">
+          <p>{goals.description}</p>
+        </AboutBlock>
+      </div>
+
+      <a href={cta.href} className="about-cta">
+        {cta.label}
+      </a>
+    </section>
+  )
 }
 
-export default About;
+export default About

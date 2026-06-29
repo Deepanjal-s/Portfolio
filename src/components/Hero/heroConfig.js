@@ -33,7 +33,7 @@ export const HERO_SOCIALS = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/Deepanjal-shukla',
+    href: 'https://linkedin.com/in/deepanjal-shukla',
     icon: 'linkedin',
   },
   {
