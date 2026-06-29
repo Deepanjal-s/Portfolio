@@ -1,0 +1,41 @@
+@import "tailwindcss" reference;
+
+.navbar-header {
+  @apply sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm;
+}
+
+.navbar-nav {
+  @apply mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8;
+}
+
+.navbar-brand {
+  @apply text-lg font-semibold tracking-tight text-gray-900 hover:text-gray-600;
+}
+
+.navbar-links {
+  @apply items-center gap-8;
+}
+
+.navbar-links--desktop {
+  @apply hidden md:flex;
+}
+
+.navbar-links--mobile {
+  @apply flex flex-col items-start gap-1 px-4 py-4;
+}
+
+.navbar-link {
+  @apply text-sm font-medium text-gray-600 hover:text-gray-900;
+}
+
+.navbar-mobile-menu {
+  @apply border-t border-gray-200 bg-white md:hidden;
+}
+
+.navbar-mobile-button {
+  @apply inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 md:hidden;
+}
+
+.navbar-mobile-icon {
+  @apply h-6 w-6;
+}

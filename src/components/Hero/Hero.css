@@ -1,0 +1,77 @@
+@import "tailwindcss" reference;
+
+.hero-section {
+  @apply mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
+}
+
+.hero-grid {
+  @apply grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-16;
+}
+
+.hero-content {
+  @apply order-2 flex flex-col md:order-1;
+}
+
+.hero-greeting {
+  @apply text-sm font-medium tracking-wide text-gray-500 uppercase;
+}
+
+.hero-name {
+  @apply mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl;
+}
+
+.hero-role {
+  @apply mt-3 text-xl font-semibold text-gray-800 sm:text-2xl;
+}
+
+.hero-tagline {
+  @apply mt-1 text-lg text-gray-600 sm:text-xl;
+}
+
+.hero-description {
+  @apply mt-4 max-w-lg text-base leading-relaxed text-gray-600;
+}
+
+.hero-cta-group {
+  @apply mt-8 flex flex-wrap gap-3;
+}
+
+.hero-cta {
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors;
+}
+
+.hero-cta--primary {
+  @apply bg-gray-900 text-white hover:bg-gray-700;
+}
+
+.hero-cta--secondary {
+  @apply border border-gray-300 bg-white text-gray-900 hover:bg-gray-50;
+}
+
+.hero-socials {
+  @apply mt-8 flex items-center gap-4;
+}
+
+.hero-social-link {
+  @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition-colors hover:border-gray-300 hover:bg-gray-50 hover:text-gray-900;
+}
+
+.hero-social-icon {
+  @apply h-5 w-5;
+}
+
+.hero-image-wrapper {
+  @apply order-1 flex justify-center md:order-2 md:justify-end;
+}
+
+.hero-image-frame {
+  @apply relative h-56 w-56 overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-lg sm:h-64 sm:w-64 lg:h-72 lg:w-72;
+}
+
+.hero-image {
+  @apply h-full w-full object-cover;
+}
+
+.hero-image-fallback {
+  @apply flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-700 to-gray-900 text-4xl font-bold text-white;
+}
