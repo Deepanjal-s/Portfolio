@@ -4,7 +4,7 @@ A responsive single-page developer portfolio built with **React** and **Tailwind
 
 ## Live Demo
 
-> Add your deployed URL here after publishing (e.g. Vercel, Netlify, GitHub Pages).
+> (https://portfolio-alpha-nine-0b6a1mvm9h.vercel.app/)
 
 ## Features
 
