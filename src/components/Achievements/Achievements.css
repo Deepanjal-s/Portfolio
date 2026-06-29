@@ -1,0 +1,85 @@
+@import "tailwindcss" reference;
+
+.achievements-section {
+  @apply mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
+}
+
+.achievements-header {
+  @apply mb-10 max-w-2xl sm:mb-12;
+}
+
+.achievements-eyebrow {
+  @apply text-sm font-medium tracking-wide text-gray-500 uppercase;
+}
+
+.achievements-title {
+  @apply mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
+}
+
+.achievements-description {
+  @apply mt-4 text-base leading-relaxed text-gray-600 sm:text-lg;
+}
+
+.achievements-timeline {
+  @apply relative flex flex-col;
+}
+
+.achievements-timeline-item {
+  @apply relative flex gap-4 pb-10 last:pb-0 sm:gap-6 lg:gap-8;
+}
+
+.achievements-timeline-marker {
+  @apply flex shrink-0 flex-col items-center;
+}
+
+.achievements-timeline-dot {
+  @apply flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-base shadow-sm sm:h-11 sm:w-11 sm:text-lg;
+}
+
+.achievements-timeline-line {
+  @apply mt-2 w-px flex-1 bg-gray-200;
+}
+
+.achievements-card {
+  @apply min-w-0 flex-1 grid gap-6 rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-8 lg:p-8;
+}
+
+.achievements-card-content {
+  @apply min-w-0;
+}
+
+.achievements-badge {
+  @apply inline-flex rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-semibold tracking-wide text-gray-700 uppercase;
+}
+
+.achievements-card-title {
+  @apply mt-3 text-lg font-semibold text-gray-900 sm:text-xl;
+}
+
+.achievements-card-org {
+  @apply mt-1 text-sm font-medium text-gray-500 sm:text-base;
+}
+
+.achievements-highlights {
+  @apply mt-4 space-y-2;
+}
+
+.achievements-highlight {
+  @apply relative pl-4 text-sm leading-relaxed text-gray-600 before:absolute before:top-2 before:left-0 before:h-1.5 before:w-1.5 before:rounded-full before:bg-gray-400 sm:text-base;
+}
+
+.achievements-image-wrapper {
+  @apply flex shrink-0 justify-center md:justify-end;
+}
+
+.achievements-image-frame {
+  @apply relative h-44 w-full max-w-xs overflow-hidden rounded-xl bg-gray-100 sm:h-48 md:h-52 md:w-44 lg:h-56 lg:w-48;
+}
+
+.achievements-image {
+  @apply h-full w-full object-cover;
+}
+
+.achievements-image-fallback {
+  @apply flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-700 to-gray-900 text-2xl font-bold text-white sm:text-3xl;
+}
