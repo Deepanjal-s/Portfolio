@@ -5,7 +5,6 @@ export const NAV_LINKS = [
   { label: 'Projects', href: '#projects' },
   { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
-  { label: 'Socials', href: '#socials' },
 ]
 
 export const BRAND = {

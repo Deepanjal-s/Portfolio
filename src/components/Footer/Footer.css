@@ -1,0 +1,77 @@
+@import "tailwindcss" reference;
+
+.footer {
+  @apply border-t border-gray-200 bg-gray-50;
+}
+
+.footer-container {
+  @apply mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16;
+}
+
+.footer-grid {
+  @apply grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12;
+}
+
+.footer-brand-name {
+  @apply text-lg font-semibold tracking-tight text-gray-900;
+}
+
+.footer-brand-tagline {
+  @apply mt-3 max-w-xs text-sm leading-relaxed text-gray-600;
+}
+
+.footer-socials {
+  @apply mt-5 flex items-center gap-3;
+}
+
+.footer-social-link {
+  @apply inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:text-gray-900;
+}
+
+.footer-social-icon {
+  @apply h-4 w-4;
+}
+
+.footer-heading {
+  @apply text-sm font-semibold tracking-wide text-gray-900 uppercase;
+}
+
+.footer-links {
+  @apply mt-4 space-y-2;
+}
+
+.footer-link {
+  @apply text-sm text-gray-600 transition-colors hover:text-gray-900;
+}
+
+.footer-contact-list {
+  @apply mt-4 space-y-3;
+}
+
+.footer-contact-item {
+  @apply text-sm text-gray-600;
+}
+
+.footer-contact-link {
+  @apply transition-colors hover:text-gray-900;
+}
+
+.footer-bottom {
+  @apply mt-10 flex flex-col items-start justify-between gap-4 border-t border-gray-200 pt-6 sm:flex-row sm:items-center;
+}
+
+.footer-bottom-meta {
+  @apply flex flex-col gap-1;
+}
+
+.footer-copyright {
+  @apply text-sm text-gray-500;
+}
+
+.footer-back-to-top {
+  @apply shrink-0 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900;
+}
+
+.footer-built-with {
+  @apply text-xs text-gray-400;
+}
