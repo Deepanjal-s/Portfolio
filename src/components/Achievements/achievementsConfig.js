@@ -16,7 +16,7 @@ export const ACHIEVEMENTS_CONTENT = {
         'Demonstrated problem-solving, teamwork, and presentation skills.',
       ],
       image: {
-        src: '/achievements/sih-winner.jpg',
+        src: '/achievements/Isih.jpg',
         alt: 'Smart India Hackathon winner at NIT Sikkim',
         fallback: 'SIH',
       },
@@ -33,7 +33,7 @@ export const ACHIEVEMENTS_CONTENT = {
         'Received a medal and official recognition for outstanding performance.',
       ],
       image: {
-        src: '/achievements/algouniversity.jpg',
+        src: '/achievements/AlgoUni.jpg',
         alt: 'AlgoUniversity Fellowship Program medal and recognition',
         fallback: 'AU',
       },
@@ -49,7 +49,7 @@ export const ACHIEVEMENTS_CONTENT = {
         'Demonstrated creativity and visual storytelling skills.',
       ],
       image: {
-        src: '/achievements/udgam-photography.jpg',
+        src: '/achievements/udgam_photo.jpg',
         alt: 'Udgam Fest photography competition at NIT Sikkim',
         fallback: '📷',
       },
@@ -65,7 +65,7 @@ export const ACHIEVEMENTS_CONTENT = {
         'Collaborated with peers on web development projects.',
       ],
       image: {
-        src: '/achievements/wdc-member.jpg',
+        src: '/achievements/WDC.jpg',
         alt: 'Web Development Cell team work at NIT Sikkim',
         fallback: 'WDC',
       },

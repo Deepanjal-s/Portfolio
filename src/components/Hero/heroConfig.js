@@ -1,3 +1,4 @@
+
 export const HERO_CONTENT = {
   greeting: "Hi, I'm",
   name: 'Deepanjal Shukla',
@@ -6,7 +7,7 @@ export const HERO_CONTENT = {
   description:
     'I enjoy building web applications and learning new technologies. Currently exploring full-stack development with React, Node.js, and MongoDB.',
   profileImage: {
-    src: '/profile.jpg',
+    src: '/Deepanjal.jpg',
     alt: 'Deepanjal Shukla',
     initials: 'DS',
   },
@@ -15,8 +16,9 @@ export const HERO_CONTENT = {
 export const HERO_CTAS = [
   {
     label: 'Download Resume',
-    href: '/resume.pdf',
+    href: '/Deepanjal_shukla_260614_120745.pdf',
     variant: 'primary',
+    download: 'Deepanjal_Shukla_Resume.pdf'
   },
   {
     label: 'View My Work',
