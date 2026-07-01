@@ -16,7 +16,7 @@ export const HERO_CONTENT = {
 export const HERO_CTAS = [
   {
     label: 'Download Resume',
-    href: '/Deepanjal_shukla_260614_120745.pdf',
+    href: '/Deepanjal_shukla_Resume.pdf',
     variant: 'primary',
     download: 'Deepanjal_Shukla_Resume.pdf'
   },
