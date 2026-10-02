@@ -1,41 +1,102 @@
+@import "../../theme.css" reference;
 @import "tailwindcss" reference;
 
 .skills-section {
-  @apply mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
+  @apply relative mx-auto max-w-6xl overflow-visible px-4 py-20 sm:px-6 sm:py-28 lg:px-8;
 }
 
-.skills-header {
-  @apply mb-10 max-w-2xl sm:mb-12;
+.skills-orb {
+  @apply pointer-events-none absolute rounded-full blur-3xl;
 }
 
-.skills-eyebrow {
-  @apply text-sm font-medium tracking-wide text-gray-500 uppercase;
+.skills-orb--one {
+  @apply top-10 -right-24 h-80 w-80 bg-accent-300/25 dark:bg-accent-700/15;
 }
 
-.skills-title {
-  @apply mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
+/* Bento grid: featured card takes a larger footprint */
+.skills-bento {
+  @apply grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4;
 }
 
-.skills-description {
-  @apply mt-4 text-base leading-relaxed text-gray-600 sm:text-lg;
+.skills-card {
+  @apply relative overflow-hidden rounded-3xl border border-gray-200/80 bg-white/80 p-6 backdrop-blur transition-all duration-500 hover:-translate-y-1.5 dark:border-white/10 dark:bg-white/[0.04];
 }
 
-.skills-grid {
-  @apply grid gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-10;
+.skills-card--featured {
+  @apply sm:col-span-2 lg:row-span-1;
 }
 
-.skills-category {
-  @apply rounded-2xl border border-gray-200 bg-white p-6 sm:p-8;
+.skills-card-glow {
+  @apply pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full opacity-60 blur-3xl transition-opacity duration-500;
 }
 
-.skills-category-title {
-  @apply text-lg font-semibold text-gray-900 sm:text-xl;
+.skills-card--accent .skills-card-glow {
+  @apply bg-accent-400/30 dark:bg-accent-600/25;
+}
+.skills-card--violet .skills-card-glow {
+  @apply bg-violet-400/30 dark:bg-violet-600/25;
+}
+.skills-card--fuchsia .skills-card-glow {
+  @apply bg-fuchsia-400/30 dark:bg-fuchsia-600/25;
+}
+.skills-card--sky .skills-card-glow {
+  @apply bg-sky-400/30 dark:bg-sky-600/25;
+}
+
+.skills-card:hover {
+  @apply shadow-2xl;
+}
+
+.skills-card--accent:hover {
+  @apply border-accent-300 shadow-accent-600/15 dark:border-accent-600/60 dark:shadow-accent-900/40;
+}
+.skills-card--violet:hover {
+  @apply border-violet-300 shadow-violet-600/15 dark:border-violet-600/60 dark:shadow-violet-900/40;
+}
+.skills-card--fuchsia:hover {
+  @apply border-fuchsia-300 shadow-fuchsia-600/15 dark:border-fuchsia-600/60 dark:shadow-fuchsia-900/40;
+}
+.skills-card--sky:hover {
+  @apply border-sky-300 shadow-sky-600/15 dark:border-sky-600/60 dark:shadow-sky-900/40;
+}
+
+.skills-card-index {
+  @apply pointer-events-none absolute top-4 right-5 font-display text-5xl font-extrabold text-gray-100 select-none dark:text-white/5;
+}
+
+.skills-card-title {
+  @apply relative font-display text-xl font-bold text-gray-900 dark:text-white;
+}
+
+.skills-card--accent .skills-card-title {
+  @apply decoration-accent-500;
 }
 
 .skills-tag-list {
-  @apply mt-4 flex flex-wrap gap-2;
+  @apply relative mt-5 flex flex-wrap gap-2;
+}
+
+.skills-card--featured .skills-tag-list {
+  @apply gap-2.5;
 }
 
 .skills-tag {
-  @apply inline-flex rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-700 transition-colors hover:border-gray-300 hover:bg-gray-100;
+  @apply inline-block rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-sm font-medium text-gray-700 transition-all duration-300 dark:border-white/10 dark:bg-white/5 dark:text-gray-300;
+}
+
+.skills-card--featured .skills-tag {
+  @apply px-4 py-2 text-[0.95rem];
+}
+
+.skills-card--accent .skills-tag:hover {
+  @apply border-accent-400 bg-accent-50 text-accent-700 dark:border-accent-500 dark:bg-accent-950/60 dark:text-accent-300;
+}
+.skills-card--violet .skills-tag:hover {
+  @apply border-violet-400 bg-violet-50 text-violet-700 dark:border-violet-500 dark:bg-violet-950/60 dark:text-violet-300;
+}
+.skills-card--fuchsia .skills-tag:hover {
+  @apply border-fuchsia-400 bg-fuchsia-50 text-fuchsia-700 dark:border-fuchsia-500 dark:bg-fuchsia-950/60 dark:text-fuchsia-300;
+}
+.skills-card--sky .skills-tag:hover {
+  @apply border-sky-400 bg-sky-50 text-sky-700 dark:border-sky-500 dark:bg-sky-950/60 dark:text-sky-300;
 }

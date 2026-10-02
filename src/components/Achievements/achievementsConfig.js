@@ -5,6 +5,23 @@ export const ACHIEVEMENTS_CONTENT = {
     'Highlights from hackathons, competitions, and contributions that reflect my problem-solving, creativity, and teamwork.',
   items: [
     {
+      id: 'tnp-volunteer',
+      icon: '🤝',
+      badge: 'Volunteer',
+      title: 'Training & Placement Volunteer',
+      organization: 'Training and Placement Cell, NIT Sikkim',
+      highlights: [
+        'Reach out to companies to invite them for campus placement and internship drives.',
+        'Coordinate placement activities with punctuality, honesty, and hard work.',
+        'Represent the Training and Placement Cell in interactions with recruiters and students.',
+      ],
+      image: {
+        src: '/achievements/tnp.jpg',
+        alt: 'Training and Placement Cell volunteering at NIT Sikkim',
+        fallback: 'TNP',
+      },
+    },
+    {
       id: 'sih-winner',
       icon: '🥇',
       badge: 'Winner',

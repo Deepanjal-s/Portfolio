@@ -1,0 +1,39 @@
+@import "../theme.css" reference;
+@import "tailwindcss" reference;
+
+/* Editorial numbered header shared by every section. */
+.section-header {
+  @apply relative mb-12 sm:mb-16;
+}
+
+.section-ghost {
+  @apply pointer-events-none absolute -top-[0.55em] -left-2 font-display font-extrabold select-none sm:-left-4;
+  font-size: clamp(5.5rem, 16vw, 11rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(99 102 241 / 0.22);
+}
+
+.dark .section-ghost {
+  -webkit-text-stroke-color: rgb(129 140 248 / 0.28);
+}
+
+.section-eyebrow {
+  @apply relative flex items-center gap-3 text-sm font-bold tracking-[0.25em] text-accent-600 uppercase dark:text-accent-400;
+}
+
+.section-eyebrow-index {
+  @apply font-display text-base tracking-normal;
+}
+
+.section-eyebrow-rule {
+  @apply h-px w-10 bg-gradient-to-r from-accent-500 to-transparent;
+}
+
+.section-title {
+  @apply relative mt-3 font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white;
+}
+
+.section-description {
+  @apply relative mt-4 max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg dark:text-gray-400;
+}

@@ -1,87 +1,140 @@
+@import "../../theme.css" reference;
 @import "tailwindcss" reference;
 
 .contact-section {
-  @apply mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
+  @apply mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8;
 }
 
-.contact-header {
-  @apply mb-10 max-w-2xl sm:mb-12;
+/* ---- Big gradient CTA panel ---- */
+.contact-panel {
+  @apply relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-accent-700 via-[#3b2f9e] to-violet-950 shadow-2xl shadow-accent-900/40;
+}
+
+.contact-panel-decor {
+  @apply pointer-events-none absolute inset-0;
+}
+
+.contact-orb {
+  @apply absolute rounded-full blur-3xl;
+  animation: contact-drift 20s ease-in-out infinite alternate;
+}
+
+.contact-orb--one {
+  @apply -top-24 -right-24 h-96 w-96 bg-fuchsia-500/30;
+  animation-delay: -6s;
+}
+
+.contact-orb--two {
+  @apply -bottom-32 -left-24 h-96 w-96 bg-accent-400/30;
+}
+
+@keyframes contact-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-3rem, 2.5rem, 0) scale(1.2);
+  }
+}
+
+.contact-panel-inner {
+  @apply relative px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-20;
 }
 
 .contact-eyebrow {
-  @apply text-sm font-medium tracking-wide text-gray-500 uppercase;
+  @apply flex items-center gap-3 text-sm font-bold tracking-[0.25em] text-accent-200 uppercase;
+}
+
+.contact-eyebrow-rule {
+  @apply h-px w-10 bg-gradient-to-r from-accent-300 to-transparent;
 }
 
 .contact-title {
-  @apply mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
+  @apply mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl;
+}
+
+.contact-title-accent {
+  @apply bg-gradient-to-r from-accent-200 via-fuchsia-200 to-accent-200 bg-clip-text text-transparent;
 }
 
 .contact-description {
-  @apply mt-4 text-base leading-relaxed text-gray-600 sm:text-lg;
+  @apply mt-5 max-w-2xl text-base leading-relaxed text-accent-100/90 sm:text-lg;
 }
 
 .contact-grid {
-  @apply grid gap-8 lg:grid-cols-2 lg:gap-12;
+  @apply mt-12 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-12;
 }
 
-.contact-panel {
+/* ---- Info column ---- */
+.contact-info {
   @apply flex flex-col gap-8;
 }
 
-.contact-info {
-  @apply rounded-2xl border border-gray-200 bg-white p-6 sm:p-8;
+.contact-availability {
+  @apply inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur;
 }
 
-.contact-availability {
-  @apply text-base leading-relaxed text-gray-600;
+.contact-availability::before {
+  content: "";
+  @apply h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_2px_rgb(52_211_153/0.8)];
 }
 
 .contact-methods {
-  @apply mt-6 space-y-5;
+  @apply flex flex-col gap-4;
 }
 
 .contact-method {
-  @apply flex items-start gap-4;
+  @apply flex items-center gap-4;
 }
 
 .contact-method-icon-wrap {
-  @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-700;
+  @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/20 bg-white/10 text-accent-200 backdrop-blur;
 }
 
 .contact-method-icon {
   @apply h-5 w-5;
 }
 
+.contact-method-content {
+  @apply min-w-0;
+}
+
 .contact-method-label {
-  @apply text-sm font-medium text-gray-500;
+  @apply text-xs font-bold tracking-widest text-accent-200/80 uppercase;
 }
 
 .contact-method-value {
-  @apply mt-1 text-base font-medium text-gray-900;
+  @apply mt-0.5 block truncate font-semibold text-white;
 }
 
 .contact-method-link {
-  @apply transition-colors hover:text-gray-600;
+  @apply transition-colors hover:text-accent-200 hover:underline;
 }
 
+/* ---- Socials ---- */
 .contact-socials {
-  @apply rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8;
+  @apply mt-2;
 }
 
 .contact-socials-title {
-  @apply text-lg font-semibold text-gray-900;
+  @apply text-sm font-bold tracking-widest text-accent-200/80 uppercase;
 }
 
 .contact-socials-list {
-  @apply mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap;
+  @apply mt-4 flex flex-wrap gap-3;
 }
 
 .contact-social-link {
-  @apply inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:text-gray-900;
+  @apply inline-flex items-center gap-2.5 rounded-2xl border border-white/20 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/20 hover:shadow-lg;
 }
 
+.contact-social-link svg {
+  @apply h-5 w-5;
+}
+
+/* ---- Glassy form card ---- */
 .contact-form-card {
-  @apply rounded-2xl border border-gray-200 bg-white p-6 sm:p-8;
+  @apply rounded-3xl border border-white/20 bg-white/10 p-6 shadow-xl backdrop-blur-xl sm:p-8;
 }
 
 .contact-form {
@@ -93,22 +146,28 @@
 }
 
 .contact-label {
-  @apply text-sm font-medium text-gray-700;
+  @apply text-sm font-bold tracking-wide text-white;
 }
 
 .contact-input,
 .contact-textarea {
-  @apply w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-base text-gray-900 placeholder:text-gray-400 focus:border-gray-500 focus:ring-2 focus:ring-gray-200 focus:outline-none;
+  @apply w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-[0.95rem] text-white placeholder-white/40 backdrop-blur transition-all duration-300 outline-none focus:border-accent-300 focus:bg-white/15 focus:ring-4 focus:ring-accent-400/25;
 }
 
 .contact-textarea {
-  @apply resize-y min-h-32;
+  @apply resize-y;
 }
 
 .contact-submit {
-  @apply inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gray-700 sm:w-auto;
+  @apply mt-1 inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3.5 text-sm font-extrabold tracking-wide text-accent-800 uppercase shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:brightness-105 active:translate-y-0;
 }
 
 .contact-form-note {
-  @apply text-sm text-gray-600;
+  @apply text-sm text-accent-100/90;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-orb {
+    animation: none;
+  }
 }

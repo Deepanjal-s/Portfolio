@@ -3,7 +3,7 @@ import SocialIcon from './SocialIcon'
 
 function HeroSocials() {
   return (
-    <div className="hero-socials">
+    <div className="hero-socials hero-enter">
       {HERO_SOCIALS.map(({ label, href, icon }) => (
         <a
           key={label}

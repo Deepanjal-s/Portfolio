@@ -11,8 +11,19 @@ export const PROJECTS_CONTENT = {
         'A fast, responsive single-page portfolio built to showcase my work, skills, and journey with a clean UI and accessible structure.',
       tech: ['React', 'Tailwind CSS', 'Vite'],
       links: [
-        { label: 'Live', href: '#home' },
-        { label: 'Code', href: 'https://github.com/' },
+        { label: 'Live', href: 'https://portfolio-alpha-nine-0b6a1mvm9h.vercel.app/' },
+        { label: 'Code', href: 'https://github.com/Deepanjal-s/Portfolio' },
+      ],
+    },
+    {
+      id: 'wdc-portal',
+      title: 'WDC Learning Portal',
+      description:
+        'A learning and recruitment preparation portal with account authentication, a UI/UX learning roadmap, curated resources and tasks, completion tracking, student profiles, and recruitment round information.',
+      tech: ['React', 'Express.js', 'MongoDB', 'Node.js', 'Tailwind CSS'],
+      links: [
+        { label: 'Live', href: 'https://wdc-learning-portal.vercel.app/' },
+        { label: 'Code', href: 'https://github.com/Deepanjal-s/wdc-learning-portal' },
       ],
     },
     {
@@ -21,7 +32,10 @@ export const PROJECTS_CONTENT = {
       description:
         'Hyperlocal food delivery platform. Where you can order food from your near by favorite vendors, and can became a delivery parter.',
       tech: ['MongoDB', 'Express.js', 'React', 'Node.js'],
-      links: [{ label: 'Code', href: 'https://github.com/' }],
+      links: [
+        { label: 'Live', href: 'https://street-vendor-react-ctae.vercel.app/' },
+        { label: 'Code', href: 'https://github.com/Deepanjal-s/street-vendor-react' },
+      ],
     },
     {
       id: 'ui-kit',
