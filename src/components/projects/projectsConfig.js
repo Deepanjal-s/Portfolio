@@ -11,8 +11,8 @@ export const PROJECTS_CONTENT = {
         'A fast, responsive single-page portfolio built to showcase my work, skills, and journey with a clean UI and accessible structure.',
       tech: ['React', 'Tailwind CSS', 'Vite'],
       links: [
-        { label: 'Live', href: '#home' },
-        { label: 'Code', href: 'https://github.com/' },
+        { label: 'Live', href: 'https://portfolio-alpha-nine-0b6a1mvm9h.vercel.app/' },
+        { label: 'Code', href: 'https://github.com/Deepanjal-s/Portfolio' },
       ],
     },
     {

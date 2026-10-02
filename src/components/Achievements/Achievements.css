@@ -100,11 +100,11 @@
 }
 
 .achievements-image-frame {
-  @apply relative h-52 w-full overflow-hidden rounded-2xl border border-gray-200/70 bg-gray-100 sm:h-full sm:min-h-[13rem] dark:border-white/10 dark:bg-gray-800;
+  @apply relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl border border-gray-200/70 bg-gray-100 dark:border-white/10 dark:bg-gray-800;
 }
 
 .achievements-image {
-  @apply h-full w-full object-cover;
+  @apply h-full w-full object-contain;
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
