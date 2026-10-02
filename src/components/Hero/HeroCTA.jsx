@@ -2,7 +2,7 @@ import { HERO_CTAS } from './heroConfig'
 
 function HeroCTA() {
   return (
-    <div className="hero-cta-group">
+    <div className="hero-cta-group hero-enter">
       {HERO_CTAS.map(({ label, href, variant, download }) => (
         <a
           key={label}

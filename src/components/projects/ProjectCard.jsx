@@ -1,4 +1,7 @@
-function ProjectCard({ title, description, tech = [], links = [] }) {
+import { useReveal } from '../../hooks/useReveal'
+
+function ProjectCard({ title, description, tech = [], links = [], delay = 0 }) {
+  const revealRef = useReveal()
   const techTags = tech.map((item) => (
     <li key={item}>
       <span className="projects-tag">{item}</span>
@@ -19,7 +22,11 @@ function ProjectCard({ title, description, tech = [], links = [] }) {
   ))
 
   return (
-    <article className="projects-card">
+    <article
+      ref={revealRef}
+      className="projects-card reveal"
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       <header className="projects-card-header">
         <h3 className="projects-card-title">{title}</h3>
       </header>

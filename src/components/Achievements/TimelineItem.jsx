@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useReveal } from '../../hooks/useReveal'
 
 function TimelineItem({
   icon,
@@ -8,8 +9,10 @@ function TimelineItem({
   highlights,
   image,
   isLast,
+  delay = 0,
 }) {
   const [hasError, setHasError] = useState(false)
+  const revealRef = useReveal()
 
   const highlightItems = highlights.map((point) => (
     <li key={point} className="achievements-highlight">
@@ -18,7 +21,11 @@ function TimelineItem({
   ))
 
   return (
-    <li className="achievements-timeline-item">
+    <li
+      ref={revealRef}
+      className="achievements-timeline-item reveal"
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       <div className="achievements-timeline-marker" aria-hidden="true">
         <span className="achievements-timeline-dot">{icon}</span>
         {!isLast ? <span className="achievements-timeline-line" /> : null}

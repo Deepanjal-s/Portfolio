@@ -1,6 +1,6 @@
 import NavLinks from './NavLinks'
 
-function MobileMenu({ isOpen, onNavigate }) {
+function MobileMenu({ isOpen, onNavigate, activeHref = '' }) {
   if (!isOpen) return null
 
   return (
@@ -11,6 +11,7 @@ function MobileMenu({ isOpen, onNavigate }) {
       <NavLinks
         onNavigate={onNavigate}
         className="navbar-links--mobile"
+        activeHref={activeHref}
       />
     </div>
   )

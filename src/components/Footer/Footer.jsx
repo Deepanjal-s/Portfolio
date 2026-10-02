@@ -1,5 +1,6 @@
 import { FOOTER_CONTENT } from './footerConfig'
 import SocialIcon from '../Hero/SocialIcon'
+import Reveal from '../Reveal'
 import './Footer.css'
 
 function Footer() {
@@ -33,7 +34,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-grid">
+        <Reveal className="footer-grid">
           <div>
             <a href={brand.href} className="footer-brand-name">
               {brand.name}
@@ -61,7 +62,7 @@ function Footer() {
               <li className="footer-contact-item">{contact.location}</li>
             </ul>
           </div>
-        </div>
+        </Reveal>
 
         <div className="footer-bottom">
           <div className="footer-bottom-meta">

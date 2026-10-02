@@ -1,15 +1,24 @@
+@import "../../theme.css" reference;
 @import "tailwindcss" reference;
 
 .navbar-header {
-  @apply sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm;
+  @apply sticky top-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-md transition-all duration-300 dark:bg-gray-950/80;
+}
+
+.navbar-header--scrolled {
+  @apply border-gray-200 bg-white/90 shadow-[0_10px_35px_-15px_rgba(79,70,229,0.25)] dark:border-gray-800 dark:bg-gray-950/90;
 }
 
 .navbar-nav {
-  @apply mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8;
+  @apply mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8;
 }
 
 .navbar-brand {
-  @apply text-lg font-semibold tracking-tight text-gray-900 hover:text-gray-600;
+  @apply font-display text-lg font-semibold tracking-tight text-gray-900 transition-colors hover:text-accent-600 dark:text-white dark:hover:text-accent-400;
+}
+
+.navbar-actions {
+  @apply flex items-center gap-1.5;
 }
 
 .navbar-links {
@@ -25,17 +34,42 @@
 }
 
 .navbar-link {
-  @apply text-sm font-medium text-gray-600 hover:text-gray-900;
+  @apply relative text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+}
+
+.navbar-link--active {
+  @apply font-semibold text-accent-600 dark:text-accent-400;
+}
+
+.navbar-links--desktop .navbar-link--active::after {
+  content: "";
+  @apply absolute -bottom-1.5 left-0 h-0.5 w-full rounded-full bg-accent-600 dark:bg-accent-400;
 }
 
 .navbar-mobile-menu {
-  @apply border-t border-gray-200 bg-white md:hidden;
+  @apply border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950 md:hidden;
+}
+
+.navbar-links--mobile .navbar-link {
+  @apply block w-full rounded-lg px-3 py-2.5;
+}
+
+.navbar-links--mobile .navbar-link--active {
+  @apply bg-accent-50 dark:bg-accent-950/60;
 }
 
 .navbar-mobile-button {
-  @apply inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 md:hidden;
+  @apply inline-flex items-center justify-center rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white md:hidden;
 }
 
 .navbar-mobile-icon {
   @apply h-6 w-6;
+}
+
+.navbar-theme-toggle {
+  @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition-all hover:-translate-y-0.5 hover:border-accent-300 hover:text-accent-600 dark:border-gray-700 dark:text-gray-300 dark:hover:border-accent-600 dark:hover:text-accent-400;
+}
+
+.navbar-theme-icon {
+  @apply h-5 w-5;
 }

@@ -2,6 +2,7 @@ import { CONTACT_CONTENT } from './contactConfig'
 import ContactInfo from './ContactInfo'
 import ContactSocials from './ContactSocials'
 import ContactForm from './ContactForm'
+import Reveal from '../Reveal'
 import './Contact.css'
 
 function Contact() {
@@ -13,23 +14,23 @@ function Contact() {
       className="contact-section"
       aria-labelledby="contact-heading"
     >
-      <header className="contact-header">
+      <Reveal as="header" className="contact-header">
         <p className="contact-eyebrow">{eyebrow}</p>
         <h2 id="contact-heading" className="contact-title">
           {title}
         </h2>
         <p className="contact-description">{description}</p>
-      </header>
+      </Reveal>
 
       <div className="contact-grid">
-        <div className="contact-panel">
+        <Reveal className="contact-panel" delay={80}>
           <ContactInfo availability={availability} methods={methods} />
           <ContactSocials />
-        </div>
+        </Reveal>
 
-        <div className="contact-form-card">
+        <Reveal className="contact-form-card" delay={160}>
           <ContactForm />
-        </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -7,14 +7,22 @@ import './Hero.css'
 function Hero() {
   return (
     <section id="home" className="hero-section">
-      <div className="hero-grid">
-        <div className="hero-content">
-          <HeroIntro />
-          <HeroCTA />
-          <HeroSocials />
-        </div>
+      <div className="hero-decor" aria-hidden="true">
+        <div className="hero-blob hero-blob--one" />
+        <div className="hero-blob hero-blob--two" />
+        <div className="hero-grid-bg" />
+      </div>
 
-        <HeroImage />
+      <div className="hero-container">
+        <div className="hero-grid">
+          <div className="hero-content">
+            <HeroIntro />
+            <HeroCTA />
+            <HeroSocials />
+          </div>
+
+          <HeroImage />
+        </div>
       </div>
     </section>
   )

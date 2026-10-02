@@ -6,7 +6,7 @@ function HeroImage() {
   const [hasError, setHasError] = useState(false)
 
   return (
-    <div className="hero-image-wrapper">
+    <div className="hero-image-wrapper hero-enter">
       <div className="hero-image-frame">
         {hasError ? (
           <div className="hero-image-fallback" aria-hidden="true">
