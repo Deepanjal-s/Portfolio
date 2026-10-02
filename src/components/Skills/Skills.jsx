@@ -1,7 +1,9 @@
 import { SKILLS_CONTENT } from './skillsConfig'
 import SkillCategory from './SkillCategory'
-import Reveal from '../Reveal'
+import SectionHeader from '../SectionHeader'
 import './Skills.css'
+
+const ACCENTS = ['accent', 'violet', 'fuchsia', 'sky']
 
 function Skills() {
   const { eyebrow, title, description, categories } = SKILLS_CONTENT
@@ -11,7 +13,9 @@ function Skills() {
       key={category.id}
       title={category.title}
       skills={category.skills}
-      delay={index * 80}
+      accent={ACCENTS[index % ACCENTS.length]}
+      featured={index === 0}
+      delay={index * 90}
     />
   ))
 
@@ -21,15 +25,16 @@ function Skills() {
       className="skills-section"
       aria-labelledby="skills-heading"
     >
-      <Reveal as="header" className="skills-header">
-        <p className="skills-eyebrow">{eyebrow}</p>
-        <h2 id="skills-heading" className="skills-title">
-          {title}
-        </h2>
-        <p className="skills-description">{description}</p>
-      </Reveal>
+      <div className="skills-orb skills-orb--one" aria-hidden="true" />
+      <SectionHeader
+        index="02"
+        eyebrow={eyebrow}
+        title={title}
+        description={description}
+        headingId="skills-heading"
+      />
 
-      <div className="skills-grid">{categoryCards}</div>
+      <div className="skills-bento">{categoryCards}</div>
     </section>
   )
 }

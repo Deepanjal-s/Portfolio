@@ -2,6 +2,8 @@ import HeroIntro from './HeroIntro'
 import HeroImage from './HeroImage'
 import HeroCTA from './HeroCTA'
 import HeroSocials from './HeroSocials'
+import HeroStats from './HeroStats'
+import TechMarquee from './TechMarquee'
 import './Hero.css'
 
 function Hero() {
@@ -10,6 +12,7 @@ function Hero() {
       <div className="hero-decor" aria-hidden="true">
         <div className="hero-blob hero-blob--one" />
         <div className="hero-blob hero-blob--two" />
+        <div className="hero-blob hero-blob--three" />
         <div className="hero-grid-bg" />
       </div>
 
@@ -18,12 +21,15 @@ function Hero() {
           <div className="hero-content">
             <HeroIntro />
             <HeroCTA />
+            <HeroStats />
             <HeroSocials />
           </div>
 
           <HeroImage />
         </div>
       </div>
+
+      <TechMarquee />
     </section>
   )
 }

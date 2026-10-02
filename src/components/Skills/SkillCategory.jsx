@@ -1,6 +1,6 @@
 import { useReveal } from '../../hooks/useReveal'
 
-function SkillCategory({ title, skills, delay = 0 }) {
+function SkillCategory({ title, skills, accent = 'accent', featured = false, delay = 0 }) {
   const revealRef = useReveal()
 
   const skillTags = skills.map((skill) => (
@@ -12,10 +12,14 @@ function SkillCategory({ title, skills, delay = 0 }) {
   return (
     <article
       ref={revealRef}
-      className="skills-category reveal"
+      className={`skills-card skills-card--${accent} reveal${featured ? ' skills-card--featured' : ''}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <h3 className="skills-category-title">{title}</h3>
+      <div className="skills-card-glow" aria-hidden="true" />
+      <span className="skills-card-index" aria-hidden="true">
+        {String(skills.length).padStart(2, '0')}
+      </span>
+      <h3 className="skills-card-title">{title}</h3>
       <ul className="skills-tag-list" aria-label={`${title} skills`}>
         {skillTags}
       </ul>

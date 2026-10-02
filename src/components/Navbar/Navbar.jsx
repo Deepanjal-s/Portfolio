@@ -70,29 +70,31 @@ function Navbar() {
 
   return (
     <header className={`navbar-header${isScrolled ? ' navbar-header--scrolled' : ''}`}>
-      <nav className="navbar-nav" aria-label="Primary">
-        <NavBrand onNavigate={handleNavigate} />
+      <div className="navbar-float">
+        <nav className="navbar-pill" aria-label="Primary">
+          <NavBrand onNavigate={handleNavigate} />
 
-        <NavLinks
+          <NavLinks
+            onNavigate={handleNavigate}
+            className="navbar-links--desktop"
+            activeHref={activeSection}
+          />
+
+          <div className="navbar-actions">
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
+            <MobileMenuButton
+              isOpen={isMobileMenuOpen}
+              onToggle={() => setIsMobileMenuOpen((prev) => !prev)}
+            />
+          </div>
+        </nav>
+
+        <MobileMenu
+          isOpen={isMobileMenuOpen}
           onNavigate={handleNavigate}
-          className="navbar-links--desktop"
           activeHref={activeSection}
         />
-
-        <div className="navbar-actions">
-          <ThemeToggle theme={theme} onToggle={toggleTheme} />
-          <MobileMenuButton
-            isOpen={isMobileMenuOpen}
-            onToggle={() => setIsMobileMenuOpen((prev) => !prev)}
-          />
-        </div>
-      </nav>
-
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onNavigate={handleNavigate}
-        activeHref={activeSection}
-      />
+      </div>
     </header>
   )
 }

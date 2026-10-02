@@ -16,12 +16,26 @@ export const PROJECTS_CONTENT = {
       ],
     },
     {
+      id: 'wdc-portal',
+      title: 'WDC Learning Portal',
+      description:
+        'A learning and recruitment preparation portal with account authentication, a UI/UX learning roadmap, curated resources and tasks, completion tracking, student profiles, and recruitment round information.',
+      tech: ['React', 'Express.js', 'MongoDB', 'Node.js', 'Tailwind CSS'],
+      links: [
+        { label: 'Live', href: 'https://wdc-learning-portal.vercel.app/' },
+        { label: 'Code', href: 'https://github.com/Deepanjal-s/wdc-learning-portal' },
+      ],
+    },
+    {
       id: 'Street Vendor App',
       title: 'Street Vendor App',
       description:
         'Hyperlocal food delivery platform. Where you can order food from your near by favorite vendors, and can became a delivery parter.',
       tech: ['MongoDB', 'Express.js', 'React', 'Node.js'],
-      links: [{ label: 'Code', href: 'https://github.com/' }],
+      links: [
+        { label: 'Live', href: 'https://street-vendor-react-ctae.vercel.app/' },
+        { label: 'Code', href: 'https://github.com/Deepanjal-s/street-vendor-react' },
+      ],
     },
     {
       id: 'ui-kit',

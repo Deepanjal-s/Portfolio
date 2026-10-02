@@ -6,7 +6,7 @@ import Reveal from '../Reveal'
 import './Contact.css'
 
 function Contact() {
-  const { eyebrow, title, description, availability, methods } = CONTACT_CONTENT
+  const { eyebrow, description, availability, methods } = CONTACT_CONTENT
 
   return (
     <section
@@ -14,24 +14,35 @@ function Contact() {
       className="contact-section"
       aria-labelledby="contact-heading"
     >
-      <Reveal as="header" className="contact-header">
-        <p className="contact-eyebrow">{eyebrow}</p>
-        <h2 id="contact-heading" className="contact-title">
-          {title}
-        </h2>
-        <p className="contact-description">{description}</p>
+      <Reveal className="contact-panel">
+        <div className="contact-panel-decor" aria-hidden="true">
+          <div className="contact-orb contact-orb--one" />
+          <div className="contact-orb contact-orb--two" />
+        </div>
+
+        <div className="contact-panel-inner">
+          <p className="contact-eyebrow">
+            <span className="font-display">05</span>
+            <span className="contact-eyebrow-rule" aria-hidden="true" />
+            {eyebrow}
+          </p>
+          <h2 id="contact-heading" className="contact-title">
+            Let&apos;s build something <span className="contact-title-accent">together</span>
+          </h2>
+          <p className="contact-description">{description}</p>
+
+          <div className="contact-grid">
+            <div className="contact-info-col">
+              <ContactInfo availability={availability} methods={methods} />
+              <ContactSocials />
+            </div>
+
+            <div className="contact-form-card">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
       </Reveal>
-
-      <div className="contact-grid">
-        <Reveal className="contact-panel" delay={80}>
-          <ContactInfo availability={availability} methods={methods} />
-          <ContactSocials />
-        </Reveal>
-
-        <Reveal className="contact-form-card" delay={160}>
-          <ContactForm />
-        </Reveal>
-      </div>
     </section>
   )
 }

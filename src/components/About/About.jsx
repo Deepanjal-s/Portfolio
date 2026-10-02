@@ -1,6 +1,7 @@
 import { ABOUT_CONTENT } from './aboutConfig'
 import AboutBlock from './AboutBlock'
 import Reveal from '../Reveal'
+import SectionHeader from '../SectionHeader'
 import './About.css'
 
 function About() {
@@ -35,12 +36,13 @@ function About() {
 
   return (
     <section id="about" className="about-section" aria-labelledby="about-heading">
-      <Reveal as="header" className="about-header">
-        <p className="about-eyebrow">{eyebrow}</p>
-        <h2 id="about-heading" className="about-title">
-          {title}
-        </h2>
-      </Reveal>
+      <div className="about-orb about-orb--one" aria-hidden="true" />
+      <SectionHeader
+        index="01"
+        eyebrow={eyebrow}
+        title={title}
+        headingId="about-heading"
+      />
 
       <Reveal>
         <p className="about-intro">{introduction}</p>
@@ -75,6 +77,7 @@ function About() {
       <Reveal delay={160}>
         <a href={cta.href} className="about-cta">
           {cta.label}
+          <span className="about-cta-arrow" aria-hidden="true">→</span>
         </a>
       </Reveal>
     </section>

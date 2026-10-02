@@ -1,6 +1,23 @@
 import { useReveal } from '../../hooks/useReveal'
 
-function ProjectCard({ title, description, tech = [], links = [], delay = 0 }) {
+function initialsFor(title) {
+  return title
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join('')
+    .toUpperCase()
+}
+
+function ProjectCard({
+  title,
+  description,
+  tech = [],
+  links = [],
+  accent = 'accent',
+  featured = false,
+  delay = 0,
+}) {
   const revealRef = useReveal()
   const techTags = tech.map((item) => (
     <li key={item}>
@@ -17,6 +34,9 @@ function ProjectCard({ title, description, tech = [], links = [], delay = 0 }) {
         rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
       >
         {link.label}
+        <span className="projects-link-arrow" aria-hidden="true">
+          →
+        </span>
       </a>
     </li>
   ))
@@ -24,27 +44,30 @@ function ProjectCard({ title, description, tech = [], links = [], delay = 0 }) {
   return (
     <article
       ref={revealRef}
-      className="projects-card reveal"
+      className={`projects-card projects-card--${accent} reveal${featured ? ' projects-card--featured' : ''}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <header className="projects-card-header">
+      <div className="projects-banner" aria-hidden="true">
+        <span className="projects-banner-glyph">{initialsFor(title)}</span>
+        <div className="projects-banner-shine" />
+      </div>
+
+      <div className="projects-card-body">
         <h3 className="projects-card-title">{title}</h3>
-      </header>
+        <p className="projects-card-description">{description}</p>
 
-      <p className="projects-card-description">{description}</p>
-
-      <ul className="projects-tag-list" aria-label="Project technologies">
-        {techTags}
-      </ul>
-
-      {links.length > 0 ? (
-        <ul className="projects-links" aria-label="Project links">
-          {linkItems}
+        <ul className="projects-tag-list" aria-label="Project technologies">
+          {techTags}
         </ul>
-      ) : null}
+
+        {links.length > 0 ? (
+          <ul className="projects-links" aria-label="Project links">
+            {linkItems}
+          </ul>
+        ) : null}
+      </div>
     </article>
   )
 }
 
 export default ProjectCard
-

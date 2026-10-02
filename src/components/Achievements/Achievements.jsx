@@ -1,6 +1,6 @@
 import { ACHIEVEMENTS_CONTENT } from './achievementsConfig'
 import TimelineItem from './TimelineItem'
-import Reveal from '../Reveal'
+import SectionHeader from '../SectionHeader'
 import './Achievements.css'
 
 function Achievements() {
@@ -16,6 +16,7 @@ function Achievements() {
       highlights={item.highlights}
       image={item.image}
       isLast={index === items.length - 1}
+      flip={index % 2 === 1}
       delay={index * 80}
     />
   ))
@@ -26,13 +27,14 @@ function Achievements() {
       className="achievements-section"
       aria-labelledby="achievements-heading"
     >
-      <Reveal as="header" className="achievements-header">
-        <p className="achievements-eyebrow">{eyebrow}</p>
-        <h2 id="achievements-heading" className="achievements-title">
-          {title}
-        </h2>
-        <p className="achievements-description">{description}</p>
-      </Reveal>
+      <div className="achievements-orb achievements-orb--one" aria-hidden="true" />
+      <SectionHeader
+        index="04"
+        eyebrow={eyebrow}
+        title={title}
+        description={description}
+        headingId="achievements-heading"
+      />
 
       <ol className="achievements-timeline">{timelineItems}</ol>
     </section>

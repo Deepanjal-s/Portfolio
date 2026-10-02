@@ -9,6 +9,7 @@ function TimelineItem({
   highlights,
   image,
   isLast,
+  flip = false,
   delay = 0,
 }) {
   const [hasError, setHasError] = useState(false)
@@ -23,7 +24,7 @@ function TimelineItem({
   return (
     <li
       ref={revealRef}
-      className="achievements-timeline-item reveal"
+      className={`achievements-timeline-item reveal${flip ? ' achievements-timeline-item--flip' : ''}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="achievements-timeline-marker" aria-hidden="true">
@@ -32,13 +33,6 @@ function TimelineItem({
       </div>
 
       <article className="achievements-card">
-        <div className="achievements-card-content">
-          <span className="achievements-badge">{badge}</span>
-          <h3 className="achievements-card-title">{title}</h3>
-          <p className="achievements-card-org">{organization}</p>
-          <ul className="achievements-highlights">{highlightItems}</ul>
-        </div>
-
         <div className="achievements-image-wrapper">
           <div className="achievements-image-frame">
             {hasError ? (
@@ -50,10 +44,18 @@ function TimelineItem({
                 src={image.src}
                 alt={image.alt}
                 className="achievements-image"
+                loading="lazy"
                 onError={() => setHasError(true)}
               />
             )}
           </div>
+        </div>
+
+        <div className="achievements-card-content">
+          <span className="achievements-badge">{badge}</span>
+          <h3 className="achievements-card-title">{title}</h3>
+          <p className="achievements-card-org">{organization}</p>
+          <ul className="achievements-highlights">{highlightItems}</ul>
         </div>
       </article>
     </li>
