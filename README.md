@@ -4,7 +4,7 @@ A responsive single-page developer portfolio built with **React** and **Tailwind
 
 ## Live Demo
 
-> (https://portfolio-alpha-nine-0b6a1mvm9h.vercel.app/)
+[View portfolio](https://portfolio-alpha-nine-0b6a1mvm9h.vercel.app/)
 
 ## Features
 
@@ -30,14 +30,14 @@ A responsive single-page developer portfolio built with **React** and **Tailwind
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [Node.js](https://nodejs.org/) (22.12 or newer; the locked Vite version requires Node.js 20.19+ or 22.12+)
 - npm
 
 ### Installation
 
 ```bash
-git clone https://github.com/Deepanjal-s/portfoliov1.git
-cd portfoliov1
+git clone https://github.com/Deepanjal-s/Portfolio.git
+cd Portfolio
 npm install
 ```
 
@@ -65,11 +65,11 @@ npm run lint
 ## Project Structure
 
 ```
-portfoliov1/
+Portfolio/
 ├── public/                    # Static assets served as-is
 │   ├── achievements/          # Achievement photos
-│   ├── profile.jpg              # Hero profile image
-│   └── resume.pdf               # Resume download
+│   ├── Deepanjal.jpg              # Hero profile image
+│   └── Deepanjal_shukla_Resume.pdf               # Resume download
 ├── src/
 │   ├── components/
 │   │   ├── About/               # About section + aboutConfig.js
@@ -110,12 +110,12 @@ Place files in the `public/` folder:
 
 | Path | Used for |
 |---|---|
-| `public/profile.jpg` | Hero profile photo |
-| `public/resume.pdf` | Resume download button |
-| `public/achievements/sih-winner.jpg` | SIH achievement photo |
-| `public/achievements/algouniversity.jpg` | AlgoUniversity achievement photo |
-| `public/achievements/udgam-photography.jpg` | Photography competition photo |
-| `public/achievements/wdc-member.jpg` | Web Development Cell photo |
+| `public/Deepanjal.jpg` | Hero profile photo |
+| `public/Deepanjal_shukla_Resume.pdf` | Resume download button |
+| `public/achievements/Isih.jpg` | SIH achievement photo |
+| `public/achievements/AlgoUni.jpg` | AlgoUniversity achievement photo |
+| `public/achievements/udgam_photo.jpg` | Photography competition photo |
+| `public/achievements/WDC.jpg` | Web Development Cell photo |
 
 Paths in config files must match these filenames.
 
