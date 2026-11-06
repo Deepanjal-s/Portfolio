@@ -2,11 +2,11 @@ export const ABOUT_CONTENT = {
   eyebrow: 'About',
   title: 'About Me',
   introduction:
-    'I am a third-year Computer Science and Engineering student at the National Institute of Technology Sikkim with a strong interest in full-stack web development and UI/UX design. I enjoy building web applications that solve real-world problems and continuously learning new technologies.',
+    'I am a B.Tech Computer Science and Engineering student at NIT Sikkim, graduating in 2028. I enjoy connecting thoughtful interfaces with backend systems, from student learning workflows to local food ordering and vehicle tracking.',
   education: {
     title: 'Education & Current Focus',
     description:
-      'Currently, I am learning the MERN stack, strengthening my understanding of Data Structures and Algorithms, and exploring modern frontend development practices.',
+      'B.Tech CSE, 2024–2028. Alongside my coursework, I practise data structures and algorithms in C/C++ and explore authentication, REST APIs, and database-backed applications through practical projects.',
   },
   skills: {
     title: 'Technical Skills',
@@ -33,7 +33,7 @@ export const ABOUT_CONTENT = {
   goals: {
     title: 'Career Goal',
     description:
-      'My current goal is to become a skilled software engineer and contribute to meaningful products while continuously improving my technical and problem-solving abilities. I am building a professional single-page portfolio website using React and Tailwind CSS.',
+      'I am seeking software engineering internships where I can contribute to useful products, learn from code reviews, and improve how I test and maintain software. My focus is on reliable functionality, clear documentation, and stronger problem-solving skills.',
   },
   cta: {
     label: 'View Projects',

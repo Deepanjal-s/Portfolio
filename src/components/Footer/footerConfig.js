@@ -3,7 +3,7 @@ import { HERO_SOCIALS } from '../Hero/heroConfig'
 
 export const FOOTER_CONTENT = {
   brand: BRAND,
-  tagline: 'Third-year CSE student building thoughtful web experiences.',
+  tagline: 'NIT Sikkim CSE ’28 · Web applications, backend systems, and continuous learning.',
   quickLinks: NAV_LINKS.filter((link) => link.label !== 'Socials'),
   contact: {
     email: 'deepanjalshukla720@gmail.com',

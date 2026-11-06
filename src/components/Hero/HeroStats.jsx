@@ -12,10 +12,10 @@ const TOTAL_SKILLS = SKILLS_CONTENT.categories.reduce(
  */
 function HeroStats() {
   const stats = [
-    { value: '3rd Year', label: 'CSE Undergraduate' },
+    { value: '2028', label: 'Graduating Class' },
     { value: 'NIT Sikkim', label: 'University' },
-    { value: String(PROJECTS_CONTENT.items.length), label: 'Projects Built' },
-    { value: `${TOTAL_SKILLS}+`, label: 'Technologies' },
+    { value: String(PROJECTS_CONTENT.items.length), label: 'Selected Projects' },
+    { value: String(TOTAL_SKILLS), label: 'Technologies' },
   ]
 
   return (
@@ -23,7 +23,7 @@ function HeroStats() {
       {stats.map(({ value, label }) => (
         <div key={label} className="hero-stat">
           <dt className="sr-only">{label}</dt>
-          <dd className="hero-stat-value" aria-hidden="true">
+          <dd className="hero-stat-value">
             {value}
           </dd>
           <dd className="hero-stat-label" aria-hidden="true">

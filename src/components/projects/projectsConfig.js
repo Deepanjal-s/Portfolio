@@ -1,49 +1,81 @@
 export const PROJECTS_CONTENT = {
   eyebrow: 'Projects',
-  title: 'Featured Projects',
+  title: 'Selected Work',
   description:
-    'A selection of projects that highlight my work across frontend, backend, and full-stack development.',
+    'Practical projects across full-stack development, backend systems, and interactive learning. Explore the code, setup guides, and current limitations in each repository.',
   items: [
-    {
-      id: 'portfolio',
-      title: 'Developer Portfolio',
-      description:
-        'A fast, responsive single-page portfolio built to showcase my work, skills, and journey with a clean UI and accessible structure.',
-      tech: ['React', 'Tailwind CSS', 'Vite'],
-      links: [
-        { label: 'Live', href: 'https://portfolio-alpha-nine-0b6a1mvm9h.vercel.app/' },
-        { label: 'Code', href: 'https://github.com/Deepanjal-s/Portfolio' },
-      ],
-    },
     {
       id: 'wdc-portal',
       title: 'WDC Learning Portal',
       description:
-        'A learning and recruitment preparation portal with account authentication, a UI/UX learning roadmap, curated resources and tasks, completion tracking, student profiles, and recruitment round information.',
-      tech: ['React', 'Express.js', 'MongoDB', 'Node.js', 'Tailwind CSS'],
+        'A learning and recruitment preparation portal for students. Combines account authentication, a UI/UX roadmap, curated resources, tasks, and completion tracking. Includes protected content-management APIs; a dedicated admin interface is not yet included.',
+      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
       links: [
-        { label: 'Live', href: 'https://wdc-learning-portal.vercel.app/' },
-        { label: 'Code', href: 'https://github.com/Deepanjal-s/wdc-learning-portal' },
+        { label: 'Live site', href: 'https://wdc-learning-portal.vercel.app/' },
+        { label: 'Source & setup', href: 'https://github.com/Deepanjal-s/wdc-learning-portal' },
       ],
     },
     {
-      id: 'Street Vendor App',
-      title: 'Street Vendor App',
+      id: 'street-vendor',
+      title: 'Street Vendor Platform',
       description:
-        'Hyperlocal food delivery platform. Where you can order food from your near by favorite vendors, and can became a delivery parter.',
-      tech: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+        'A hyperlocal food-ordering project with customer, vendor, and delivery-partner workflows. Customers browse menus and place orders; vendors manage menus and incoming orders. Payment integration and real-time tracking remain future improvements.',
+      tech: ['React', 'Express', 'MongoDB', 'JWT'],
       links: [
-        { label: 'Live', href: 'https://street-vendor-react-ctae.vercel.app/' },
-        { label: 'Code', href: 'https://github.com/Deepanjal-s/street-vendor-react' },
+        { label: 'Live site', href: 'https://street-vendor-react-ctae.vercel.app/' },
+        { label: 'Source & setup', href: 'https://github.com/Deepanjal-s/street-vendor-react' },
       ],
     },
     {
-      id: 'ui-kit',
-      title: 'UI Components & Landing Pages',
+      id: 'vehicle-tracking',
+      title: 'Vehicle Tracking System',
       description:
-        'A collection of landing pages and UI experiments, focusing on layout, typography, and UX polish.',
-      tech: ['Figma', 'React', 'Tailwind CSS'],
-      links: [{ label: 'Designs', href: 'https://www.figma.com/' }],
+        'A GPS-tracking prototype pairing a FastAPI backend with a Flutter dashboard. Explores MQTT ingestion, user-to-vehicle assignment, location history, and a map refreshed through polling. The client currently requires local API configuration.',
+      tech: ['Python', 'FastAPI', 'PostgreSQL', 'MQTT', 'Flutter'],
+      links: [
+        { label: 'Backend', href: 'https://github.com/Deepanjal-s/vehicle-tracking-backend' },
+        { label: 'Flutter client', href: 'https://github.com/Deepanjal-s/vehicle-tracking-flutter' },
+      ],
+    },
+    {
+      id: 'interactive-learning',
+      title: 'HTML Interactive Learning',
+      description:
+        'Browser-based classroom activities with a searchable catalog and embedded activity variations. Includes food-detective and Pythagoras activities, with a documented contribution workflow for expanding the collection.',
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      links: [
+        { label: 'Source & activities', href: 'https://github.com/Deepanjal-s/html_interactive_learning' },
+      ],
+    },
+    {
+      id: 'raktkoshika',
+      title: 'Raktkoshika',
+      description:
+        'A blood-request coordination demo with Marathi, Hindi, and English interfaces. Explores caregiver and coordinator workflows using fictional centres and synthetic records. This is a review prototype, not a live medical service.',
+      tech: ['React', 'TypeScript'],
+      links: [
+        { label: 'Source & limitations', href: 'https://github.com/Deepanjal-s/raktkoshika' },
+      ],
+    },
+    {
+      id: 'problem-solving',
+      title: 'DSA & Problem Solving',
+      description:
+        'My C/C++ problem-solving practice, covering arrays, hashing, two pointers, sliding windows, and stacks. Working toward NeetCode 150 while strengthening algorithmic reasoning and core computer science fundamentals.',
+      tech: ['C', 'C++', 'Data Structures', 'Algorithms'],
+      links: [
+        { label: 'Browse solutions', href: 'https://github.com/Deepanjal-s/leetcode-solutions' },
+      ],
+    },
+    {
+      id: 'portfolio',
+      title: 'Developer Portfolio',
+      description:
+        'This responsive portfolio brings together my projects, skills, and achievements. Built with reusable React components, configurable content, light and dark themes, and direct links to source repositories.',
+      tech: ['React', 'Tailwind CSS', 'Vite'],
+      links: [
+        { label: 'Source code', href: 'https://github.com/Deepanjal-s/Portfolio' },
+      ],
     },
   ],
 }

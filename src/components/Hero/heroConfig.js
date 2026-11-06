@@ -2,10 +2,10 @@
 export const HERO_CONTENT = {
   greeting: "Hi, I'm",
   name: 'Deepanjal Shukla',
-  role: 'Third-Year CSE Student',
-  tagline: 'MERN Stack Developer',
+  role: 'CSE Undergraduate · NIT Sikkim ’28',
+  tagline: 'Building useful web applications',
   description:
-    'I enjoy building web applications and learning new technologies. Currently exploring full-stack development with React, Node.js, and MongoDB.',
+    'I build learning platforms, ordering workflows, and backend systems with React, Node.js, and Python. Seeking software engineering internships while strengthening DSA in C/C++.',
   profileImage: {
     src: '/Deepanjal.jpg',
     alt: 'Deepanjal Shukla',
