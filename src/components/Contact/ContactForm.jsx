@@ -33,7 +33,9 @@ function ContactForm() {
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+    // No `noValidate`: the browser enforces `required` and `type="email"`, so an
+    // empty or malformed form never opens a blank email.
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="contact-field">
         <label htmlFor="contact-name" className="contact-label">
           {form.nameLabel}

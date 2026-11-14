@@ -27,6 +27,16 @@ export const PROJECTS_CONTENT = {
       ],
     },
     {
+      id: 'big-oh-no',
+      title: 'big-oh-no',
+      description:
+        'A zero-dependency TypeScript library that catches accidentally quadratic code in tests. Instead of brittle millisecond limits, it measures how running time grows as input doubles and fails when growth exceeds the allowed complexity. Works in Vitest, Jest and node:test.',
+      tech: ['TypeScript', 'Vitest', 'Jest', 'Node.js'],
+      links: [
+        { label: 'Source & docs', href: 'https://github.com/Deepanjal-s/big-oh-no' },
+      ],
+    },
+    {
       id: 'vehicle-tracking',
       title: 'Vehicle Tracking System',
       description:
