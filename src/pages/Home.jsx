@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import Skills from '../components/Skills'
 import Projects from '../components/projects'
 import Achievements from '../components/Achievements'
+import Services from '../components/Services'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
@@ -17,6 +18,7 @@ function Home() {
             <Skills />
             <Projects />
             <Achievements />
+            <Services />
             <Contact />
             <Footer />
         </>
