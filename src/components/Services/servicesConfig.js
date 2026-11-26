@@ -21,6 +21,7 @@ export const SERVICES_CONTENT = {
       ],
       proof: 'Found a ranking bug in a Next.js + Postgres app: answer kept in context 56% → 85% over 479 questions.',
       proofHref: 'https://github.com/Deepanjal-s/memory-recall-bench/tree/main/results',
+      sample: { label: 'See a sample audit report', href: '/sample-audit.html' },
     },
     {
       id: 'fix',

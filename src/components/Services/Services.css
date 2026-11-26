@@ -104,3 +104,7 @@
 .case-steps {
   @apply mt-1 list-decimal space-y-1 pl-5 text-sm text-gray-700 dark:text-gray-300;
 }
+
+.services-card-sample {
+  @apply mt-3 text-sm font-medium text-accent-700 underline decoration-accent-400/50 underline-offset-2 hover:text-accent-900 dark:text-accent-300 dark:hover:text-accent-100;
+}

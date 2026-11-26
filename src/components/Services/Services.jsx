@@ -24,6 +24,11 @@ function ServiceCard({ item, email, delay }) {
           {item.proof}
         </a>
       </p>
+      {item.sample && (
+        <a className="services-card-sample" href={item.sample.href} target="_blank" rel="noreferrer">
+          {item.sample.label} →
+        </a>
+      )}
       <a className="services-card-cta" href={`mailto:${email}?subject=${subject}`}>
         Ask about {item.name.toLowerCase()}
       </a>
