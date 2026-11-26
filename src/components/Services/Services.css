@@ -56,3 +56,51 @@
 .services-card-cta {
   @apply mt-auto pt-6 text-sm font-semibold text-accent-700 hover:text-accent-900 dark:text-accent-300 dark:hover:text-accent-100;
 }
+
+.case-heading {
+  @apply mt-16 font-display text-2xl font-semibold text-gray-900 dark:text-white;
+}
+
+.case-grid {
+  @apply mt-6 grid grid-cols-1 gap-5 lg:grid-cols-2;
+}
+
+.case-card {
+  @apply flex flex-col rounded-3xl border border-gray-200/80 bg-white/80 p-6 backdrop-blur dark:border-white/10 dark:bg-white/[0.04];
+}
+
+.case-title {
+  @apply font-display text-xl font-semibold text-gray-900 dark:text-white;
+}
+
+.case-context {
+  @apply mt-1 text-sm text-gray-500 dark:text-gray-400;
+}
+
+.case-results {
+  @apply my-5 grid grid-cols-1 gap-3 sm:grid-cols-3;
+}
+
+.case-result {
+  @apply rounded-2xl bg-accent-50 p-3 dark:bg-accent-500/10;
+}
+
+.case-result-value {
+  @apply font-display text-lg font-bold text-accent-700 dark:text-accent-200;
+}
+
+.case-result-label {
+  @apply mt-0.5 text-xs leading-snug text-gray-600 dark:text-gray-400;
+}
+
+.case-text {
+  @apply mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300;
+}
+
+.case-k {
+  @apply font-semibold text-gray-900 dark:text-white;
+}
+
+.case-steps {
+  @apply mt-1 list-decimal space-y-1 pl-5 text-sm text-gray-700 dark:text-gray-300;
+}

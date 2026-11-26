@@ -54,3 +54,44 @@ export const SERVICES_CONTENT = {
     },
   ],
 }
+
+export const CASE_STUDIES = [
+  {
+    id: 'ai-chat-memory',
+    title: 'A chat app that kept losing the answer',
+    context: 'Next.js + PostgreSQL chat assistant with long-term memory (ai-chat-memory).',
+    problem:
+      'Memory search used PostgreSQL ts_rank_cd. It has no inverse document frequency, so long, rambling messages outranked the short one that held the fact.',
+    method: [
+      'Ran the app’s retrieval against all 479 LongMemEval questions with memory-recall-bench',
+      'Read the failing questions to find the pattern (long messages winning)',
+      'Replaced the ranking with BM25 re-ranking, then added on-device embeddings',
+      'Added a retrieval regression test to GitHub Actions so the fix stays fixed',
+    ],
+    results: [
+      { value: '56% → 85%', label: 'answer kept in a 4k context' },
+      { value: '163 / 8', label: 'questions fixed / broken' },
+      { value: '28% → 61%', label: 'all evidence kept at 4k' },
+    ],
+    href: 'https://github.com/Deepanjal-s/memory-recall-bench/tree/main/results#case-study-finding-and-fixing-a-ranking-bug-in-a-real-app',
+  },
+  {
+    id: 'recall-vs-accuracy',
+    title: 'More memory, same answers: what actually helped',
+    context: 'Open research on LongMemEval with a Qwen3-4B reader and judge on free Kaggle GPUs.',
+    problem:
+      'Giving the model 4× more context (4k → 16k tokens) raised recall from 63% to 90%, but answer accuracy stayed flat: the extra messages distract the reader.',
+    method: [
+      'Measured judged answer accuracy, not just recall, on all 479 questions',
+      'Paired per-question comparisons with sign tests, so gains are not noise',
+      'Added a cross-encoder re-ranker (bge-reranker-v2-m3) over the top 100 candidates',
+      'Kept the context mid-sized (8k) instead of widening it',
+    ],
+    results: [
+      { value: '59.1% → 64.9%', label: 'answer accuracy, best configuration' },
+      { value: '63 / 35', label: 'fixed / broken vs the old setup (p≈0.006)' },
+      { value: '+8.4 pts', label: 'all-evidence recall at 4k' },
+    ],
+    href: 'https://github.com/Deepanjal-s/memory-recall-bench/tree/main/results#re-ranking-precision-at-small-budgets-all-479-kaggle-gpu',
+  },
+]

@@ -1,4 +1,4 @@
-import { SERVICES_CONTENT } from './servicesConfig'
+import { SERVICES_CONTENT, CASE_STUDIES } from './servicesConfig'
 import SectionHeader from '../SectionHeader'
 import Reveal from '../Reveal'
 import './Services.css'
@@ -31,6 +31,35 @@ function ServiceCard({ item, email, delay }) {
   )
 }
 
+function CaseStudy({ study, delay }) {
+  return (
+    <Reveal as="article" className="case-card" delay={delay}>
+      <h4 className="case-title">{study.title}</h4>
+      <p className="case-context">{study.context}</p>
+      <dl className="case-results">
+        {study.results.map((r) => (
+          <div key={r.label} className="case-result">
+            <dt className="case-result-value">{r.value}</dt>
+            <dd className="case-result-label">{r.label}</dd>
+          </div>
+        ))}
+      </dl>
+      <p className="case-text">
+        <span className="case-k">Problem.</span> {study.problem}
+      </p>
+      <p className="case-k case-text">What I did</p>
+      <ol className="case-steps">
+        {study.method.map((m) => (
+          <li key={m}>{m}</li>
+        ))}
+      </ol>
+      <a className="services-card-cta" href={study.href} target="_blank" rel="noreferrer">
+        Full write-up and data
+      </a>
+    </Reveal>
+  )
+}
+
 function Services() {
   const { eyebrow, title, description, availability, offer, email, items } = SERVICES_CONTENT
   return (
@@ -48,6 +77,12 @@ function Services() {
       <div className="services-grid">
         {items.map((item, i) => (
           <ServiceCard key={item.id} item={item} email={email} delay={i * 80} />
+        ))}
+      </div>
+      <h3 className="case-heading">Case studies</h3>
+      <div className="case-grid">
+        {CASE_STUDIES.map((s, i) => (
+          <CaseStudy key={s.id} study={s} delay={i * 80} />
         ))}
       </div>
     </section>
