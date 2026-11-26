@@ -68,6 +68,7 @@ export const CASE_STUDIES = [
       'Read the failing questions to find the pattern (long messages winning)',
       'Replaced the ranking with BM25 re-ranking, then added on-device embeddings',
       'Added a retrieval regression test to GitHub Actions so the fix stays fixed',
+      'Audited the remaining misses (81% were found but ranked too low) and added an on-device re-ranker: 61% → 70% all evidence kept',
     ],
     results: [
       { value: '56% → 85%', label: 'answer kept in a 4k context' },
