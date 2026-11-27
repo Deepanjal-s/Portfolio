@@ -16,7 +16,7 @@ export const ACHIEVEMENTS_CONTENT = {
         'Represent the Training and Placement Cell in interactions with recruiters and students.',
       ],
       image: {
-        src: '/achievements/tnp.jpg',
+        src: null, // no photo yet: the card shows the fallback label (add public/achievements/tnp.jpg and set it here)
         alt: 'Training and Placement Cell volunteering at NIT Sikkim',
         fallback: 'TNP',
       },

@@ -35,7 +35,7 @@
       // Apply the saved (or system-preferred) theme before first paint to avoid a flash.
       (function () {
         try {
-          var stored = localStorage.getItem("theme");
+          var stored = localStorage.getItem("theme-choice"); // keep in sync with useTheme.js
           var dark = stored
             ? stored === "dark"
             : window.matchMedia("(prefers-color-scheme: dark)").matches;

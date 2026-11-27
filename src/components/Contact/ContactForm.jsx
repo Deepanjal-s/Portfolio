@@ -13,23 +13,50 @@ function ContactForm() {
 
   const [formData, setFormData] = useState(INITIAL_FORM)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
+  const [copied, setCopied] = useState(false)
+
+  const draft = () => {
+    const name = formData.name.trim()
+    return {
+      subject: `Portfolio Contact from ${name}`,
+      body: `Name: ${name}\nEmail: ${formData.email.trim()}\n\n${formData.message.trim()}`,
+    }
+  }
 
   const handleChange = (event) => {
     const { name, value } = event.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+    setError('')
+    setCopied(false)
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    if (!formData.name.trim() || !formData.message.trim()) {
+      setError('Please fill in your name and a message.')
+      return
+    }
 
-    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`)
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
-    )
-
-    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`
+    const { subject, body } = draft()
+    window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    // The draft stays in the form: without a mail app the link does nothing, and the visitor can copy it instead.
     setIsSubmitted(true)
-    setFormData(INITIAL_FORM)
+  }
+
+  const handleCopy = async () => {
+    if (!formData.name.trim() || !formData.message.trim()) {
+      setError('Please fill in your name and a message.')
+      return
+    }
+    const { subject, body } = draft()
+    try {
+      await navigator.clipboard.writeText(`To: ${recipientEmail}\nSubject: ${subject}\n\n${body}`)
+      setError('')
+      setCopied(true)
+    } catch {
+      setError(`Copying failed. Please email ${recipientEmail} directly.`)
+    }
   }
 
   return (
@@ -90,9 +117,19 @@ function ContactForm() {
         {form.submitLabel}
       </button>
 
+      {error ? (
+        <p className="contact-form-note" role="alert">
+          {error}
+        </p>
+      ) : null}
+
       {isSubmitted ? (
         <p className="contact-form-note" role="status">
-          Your email client should open shortly. If it does not, email me directly.
+          Your email client should open shortly. If it does not,{' '}
+          <button type="button" className="contact-copy" onClick={handleCopy}>
+            copy the message
+          </button>{' '}
+          and send it to {recipientEmail}.{copied ? ' Copied.' : ''}
         </p>
       ) : null}
     </form>

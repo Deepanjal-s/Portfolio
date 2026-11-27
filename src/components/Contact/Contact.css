@@ -166,6 +166,10 @@
   @apply text-sm text-accent-100/90;
 }
 
+.contact-copy {
+  @apply font-semibold text-white underline underline-offset-2 hover:no-underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .contact-orb {
     animation: none;

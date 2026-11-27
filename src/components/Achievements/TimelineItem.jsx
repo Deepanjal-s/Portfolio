@@ -35,7 +35,7 @@ function TimelineItem({
       <article className="achievements-card">
         <div className="achievements-image-wrapper">
           <div className="achievements-image-frame">
-            {hasError ? (
+            {hasError || !image.src ? (
               <div className="achievements-image-fallback" aria-hidden="true">
                 {image.fallback}
               </div>
